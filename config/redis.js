@@ -6,6 +6,7 @@ const redisConfig = {
     host: process.env.REDIS_HOST,
     port: parseInt(process.env.REDIS_PORT),
     tls: process.env.REDIS_TLS === 'true' ? {} : undefined, // Enable TLS if needed
+    password: process.env.REDIS_PASSWORD,
 
     // Retry Strategy
     retryStrategy(times) {
